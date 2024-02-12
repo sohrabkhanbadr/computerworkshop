@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display" disabled />
+      <div class="buttons">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="backspace()">←</button>
+        <button onclick="calculate('/', 'display')">÷</button>
+        <button onclick="appendNumber('7', 'display')">7</button>
+        <button onclick="appendNumber('8', 'display')">8</button>
+        <button onclick="appendNumber('9', 'display')">9</button>
+        <button onclick="calculate('*', 'display')">x</button>
+        <button onclick="appendNumber('4', 'display')">4</button>
+        <button onclick="appendNumber('5', 'display')">5</button>
+        <button onclick="appendNumber('6', 'display')">6</button>
+        <button onclick="calculate('-', 'display')">-</button>
+        <button onclick="appendNumber('1', 'display')">1</button>
+        <button onclick="appendNumber('2', 'display')">2</button>
+        <button onclick="appendNumber('3', 'display')">3</button>
+        <button onclick="calculate('+', 'display')">+</button>
+        <button onclick="appendNumber('0', 'display')">0</button>
+        <button onclick="appendDecimal('display')">.</button>
+        <button onclick="calculate('=', 'display')">=</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
