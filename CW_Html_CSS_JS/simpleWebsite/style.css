@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#main-container {
+  display: inline-block;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#welcome-message {
+  margin-bottom: 20px;
+}
+
+#toggle-message {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+...
+#welcome-message {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+...
