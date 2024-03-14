@@ -1,3 +1,7 @@
+![image](https://github.com/sohrabkhanbadr/computerworkshop/assets/65416303/5a853488-48bb-4598-8642-9c1c31b2942b)
+
+# Spiral Doodle Pattern
+
 
 ![image](https://github.com/sohrabkhanbadr/computerworkshop/assets/65416303/e7b61ea3-1c70-489b-863e-8a58ac2bde1a)
 
