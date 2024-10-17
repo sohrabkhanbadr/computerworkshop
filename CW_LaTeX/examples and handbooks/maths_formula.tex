@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath} % For align, matrix, and other math environments
+
+\begin{document}
+
+\title{LaTeX Math Examples}
+\author{Your Name}
+\date{\today}
+\maketitle
+
+\section{Inline Math}
+The formula for the area of a circle is $A = \pi r^2$.  
+Einstein’s famous equation: $E = mc^2$.
+
+\section{Display Math}
+Here is an example of a standalone equation:
+\[
+E = mc^2
+\]
+
+\section{Equation Environment (With Numbering)}
+We can also number equations using the \texttt{equation} environment:
+
+\begin{equation}
+F = ma
+\end{equation}
+
+\section{Aligning Equations}
+The \texttt{align} environment allows for aligned multi-line equations:
+
+\begin{align}
+a^2 + b^2 &= c^2 \\
+e^{i\pi} + 1 &= 0
+\end{align}
+
+\section{Common Mathematical Symbols}
+Here are some common symbols in LaTeX:
+
+\begin{itemize}
+    \item Greek letters: $\alpha, \beta, \gamma, \pi, \theta, \Omega$
+    \item Superscripts and subscripts: $x_i^2$
+    \item Fraction: $\frac{a}{b}$
+    \item Summation: $\sum_{i=1}^n i$
+    \item Integral: $\int_0^1 x^2 \, dx$
+\end{itemize}
+
+\section{Matrices}
+The following is a $2 \times 2$ matrix:
+
+\[
+\begin{matrix}
+1 & 2 \\
+3 & 4
+\end{matrix}
+\]
+
+\section{Cases}
+Below is a piecewise function:
+
+\[
+f(x) =
+\begin{cases}
+x^2 & \text{if } x \geq 0 \\
+-x & \text{if } x < 0
+\end{cases}
+\]
+
+\section{Spacing in Math Mode}
+Using different spacing commands:
+
+\[
+a \, b \quad c \qquad d
+\]
+
+\end{document}

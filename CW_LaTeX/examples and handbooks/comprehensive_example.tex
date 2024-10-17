@@ -1,0 +1,121 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Packages
+\usepackage{amsmath}      % For math environments
+\usepackage{graphicx}     % For including images
+\usepackage{geometry}     % To customize margins
+\usepackage{fancyhdr}     % For custom headers/footers
+\usepackage{hyperref}     % For hyperlinks
+\geometry{margin=1in}     % Set margins to 1 inch
+
+% Bibliography (for citation)
+\begin{filecontents}{references.bib}
+@book{knuth1984,
+  author = {Knuth, Donald E.},
+  title = {The \TeX book},
+  year = {1984},
+  publisher = {Addison-Wesley}
+}
+\end{filecontents}
+
+% Header and Footer Customization
+\pagestyle{fancy}
+\fancyhead[L]{LaTeX Tutorial}
+\fancyhead[R]{Page \thepage}
+\fancyfoot[C]{Your Name - \today}
+
+\title{A Beginner's Guide to LaTeX}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents  % Automatically generates the table of contents
+\newpage
+
+\section{Introduction}
+LaTeX is a powerful typesetting system, especially useful for academic writing, research papers, and presentations. This document showcases key features you should know as a beginner.
+
+\section{Text Formatting}
+Here is how to use basic text formatting in LaTeX:
+\begin{itemize}
+    \item \textbf{Bold text}
+    \item \textit{Italic text}
+    \item \underline{Underlined text}
+\end{itemize}
+
+Line breaks can be added with \texttt{\\}. Paragraphs are separated by leaving a blank line.
+
+\section{Math in LaTeX}
+You can include math inline, like $E = mc^2$, or display it on a separate line:
+\[
+a^2 + b^2 = c^2
+\]
+
+\subsection{Aligned Equations}
+Aligned equations are useful for multi-line expressions:
+\begin{align}
+F &= ma \\
+E &= mc^2
+\end{align}
+
+\subsection{Common Math Symbols}
+Here are some common mathematical symbols:
+\begin{itemize}
+    \item Greek letters: $\alpha, \beta, \pi$
+    \item Fractions: $\frac{a}{b}$
+    \item Summation: $\sum_{i=1}^n i$
+    \item Integral: $\int_0^1 x^2 \, dx$
+\end{itemize}
+
+\section{Tables}
+Tables help organize data neatly:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    Item & Quantity \\ \hline
+    Apples & 5 \\ 
+    Oranges & 3 \\ 
+    Bananas & 7 \\ \hline
+    \end{tabular}
+    \caption{A simple table}
+    \label{tab:fruit}
+\end{table}
+
+\section{Figures}
+You can include figures using the \texttt{graphicx} package. Make sure the image is in the same folder as your LaTeX file.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{example-image} % Replace with your image
+    \caption{An example image}
+    \label{fig:image}
+\end{figure}
+
+Refer to Table~\ref{tab:fruit} and Figure~\ref{fig:image} in the text.
+
+\section{Cross-Referencing}
+Sections, equations, and tables can be referenced with labels. For example, Equation~\ref{eq:newton} is Newton's second law:
+
+\begin{equation}
+F = ma
+\label{eq:newton}
+\end{equation}
+
+\section{Citations}
+Here’s a citation example from Donald Knuth's book~\cite{knuth1984}. The bibliography is placed at the end of the document.
+
+\section{Page Layout}
+You can customize the page layout with the \texttt{geometry} package to control margins, and use the \texttt{fancyhdr} package for custom headers and footers.
+
+\section{Conclusion}
+This document introduced you to the basic concepts of LaTeX. Practice these examples to become comfortable with the system.
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
