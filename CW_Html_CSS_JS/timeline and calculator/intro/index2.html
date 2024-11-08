@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Forms and Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        .form-container input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #5cb85c;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .form-container button:hover {
+            background-color: #4cae4c;
+        }
+        hr {
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form 1</h2>
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+        <input type="text" id="result" readonly>
+        <button onclick="document.getElementById('result').value = document.getElementById('num1').value = document.getElementById('num2').value = 7;">Equal</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Form 2</h2>
+        <input type="text" id="num3">
+        <input type="text" id="num4">
+        <input type="text" id="result2" readonly>
+        <button onclick="sumFunc()">Equal</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Form 3</h2>
+        <input type="text" id="firstnum">
+        <input type="text" id="secondnum">
+        <input type="text" id="operation">
+        <input type="text" id="result3" readonly>
+        <button onclick="equalOperator()">Equal</button>
+    </div>
+
+    <!-- Add more forms here -->
+    <div class="form-container">
+        <h2>Form 4</h2>
+        <input type="text" id="input1">
+        <input type="text" id="input2">
+        <button onclick="alert('Form 4 Completed!')">Submit</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Form 5</h2>
+        <input type="text" id="input3">
+        <input type="text" id="input4">
+        <button onclick="alert('Form 5 Completed!')">Submit</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Form 6</h2>
+        <input type="text" id="input5">
+        <input type="text" id="input6">
+        <button onclick="alert('Form 6 Completed!')">Submit</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Calculator (Form 7)</h2>
+        <input type="text" id="calcInput1">
+        <input type="text" id="calcInput2">
+        <input type="text" id="calcResult" readonly>
+        <button onclick="performCalculation()">Calculate</button>
+    </div>
+
+    <hr>
+
+    <script>
+        // JavaScript for Form 2
+        function sumFunc() {
+            var num3 = document.getElementById('num3').value;
+            var num4 = document.getElementById('num4').value;
+            var result2 = parseFloat(num3) + parseFloat(num4);
+            document.getElementById('result2').value = result2;
+        }
+
+        // JavaScript for Form 3 (Basic Arithmetic Operations)
+        function equalOperator() {
+            var num1 = document.getElementById('firstnum').value;
+            var num2 = document.getElementById('secondnum').value;
+            var operator = document.getElementById('operation').value;
+            var result3;
+
+            num1 = parseFloat(num1);
+            num2 = parseFloat(num2);
+
+            if (operator === '+') {
+                result3 = num1 + num2;
+            } else if (operator === '-') {
+                result3 = num1 - num2;
+            } else if (operator === '*') {
+                result3 = num1 * num2;
+            } else if (operator === '/') {
+                result3 = num1 / num2;
+            } else {
+                result3 = 'Invalid Operator';
+            }
+
+            document.getElementById('result3').value = result3;
+        }
+
+        // JavaScript for Calculator (Form 7)
+        function performCalculation() {
+            var num1 = document.getElementById('calcInput1').value;
+            var num2 = document.getElementById('calcInput2').value;
+            var result;
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                num1 = parseFloat(num1);
+                num2 = parseFloat(num2);
+
+                result = num1 + num2; // Simple addition, you can extend it
+                document.getElementById('calcResult').value = result;
+            } else {
+                document.getElementById('calcResult').value = "Please enter valid numbers";
+            }
+        }
+    </script>
+</body>
+</html>
