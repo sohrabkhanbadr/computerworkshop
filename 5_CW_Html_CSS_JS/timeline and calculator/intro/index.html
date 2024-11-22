@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <hr> 
+
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="result" readonly>
+    <button onclick="result.value=num1.value=num2.value=7;">equal</button>
+
+    <hr>
+
+    <input type="text" id="num3">
+    <input type="text" id="num4">
+
+    <input type="text" id="result2" readonly>
+    <button onclick="sumFunc()">equal2</button>
+
+    <hr>
+
+
+    <hr>
+
+    <input type="text" id="firstnum">
+    <input type="text" id="secondnum">
+    <input type="text" id="operation">
+    <input type="text" id="result3" readonly>
+    <button onclick="equalOperator()">equal3</button>
+
+    <hr>
+
+
+    <hr>
+
+    <div class="calculator">
+
+        <div class="display">
+            <input type="text" id="calcDisplay">
+        </div>
+        <div class="buttons">
+            <div class="row">
+                <button onclick="addToDsiplay('1')">1</button>
+                <button onclick="addToDsiplay('2')">2</button>
+                <button onclick="addToDsiplay('*')">*</button>
+            </div>
+            <div class="row">
+                <button onclick="addToDsiplay('3')">3</button>
+                <button onclick="addToDsiplay('4')">4</button>
+                <button onclick="addToDsiplay('/')">/</button>
+            </div>
+            <div class="row">
+                <button onclick="addToDsiplay('5')">5</button>
+                <button onclick="addToDsiplay('6')">6</button>
+                <button onclick="calculateFunc()">=</button>
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
